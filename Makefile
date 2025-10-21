@@ -70,11 +70,11 @@ d deploy:
 	@echo "🚀 Deploying $(PROJECT_NAME) → $(DEPLOY_DIR)"
 	@$(MKDIR_P) $(DEPLOY_DIR) $(DEPLOY_BACKUP)
 
-	@echo "📦 Backing up existing binaries..."
-	@if [ -d "$(DEPLOY_DIR)" ]; then \
-		cp -R $(DEPLOY_DIR) $(DEPLOY_BACKUP)/$(DATE_TAG); \
-		echo "🗂  Backup saved to $(DEPLOY_BACKUP)/$(DATE_TAG)"; \
-	fi
+	# @echo "📦 Backing up existing binaries..."
+	# @if [ -d "$(DEPLOY_DIR)" ]; then \
+	# 	cp -R $(DEPLOY_DIR) $(DEPLOY_BACKUP)/$(DATE_TAG); \
+	# 	echo "🗂  Backup saved to $(DEPLOY_BACKUP)/$(DATE_TAG)"; \
+	# fi
 
 	@echo "🔨 Building fresh binaries..."
 	@$(MAKE) b
